@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // temperature converter
+        Scanner scanner = new Scanner(System.in);
+
+        double temp;
+        double newtemp;
+        String unit;
+
+        System.out.print("Enter the temperature: ");
+        temp = scanner.nextDouble();
+        System.out.print("Convert to celsius or Fahrenheit? (C or F): ");
+        unit =scanner.next().toUpperCase();
+
+        //(condition) ? true : false
+       newtemp = (unit.equals("C")) ? (temp - 32) * 5 / 9 : (temp * 5 /9) + 32;
+        System.out.printf("%.1f^%s", newtemp, unit);
+
+        scanner.close();
+    }
+}
